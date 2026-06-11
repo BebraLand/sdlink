@@ -27,6 +27,10 @@ public final class BotConfigSettings {
     @SpecComment("Use silent replies when Slash Commands are used")
     public boolean silentReplies = true;
 
+    @Path("enableSlashCommands")
+    @SpecComment("Register Slash Commands with Discord")
+    public boolean enableSlashCommands = true;
+
     @Path("statusUpdateInterval")
     @SpecComment("How often the Bot Status will update on Discord (in Seconds). Set to 0 to disable")
     public int statusUpdateInterval = 30;

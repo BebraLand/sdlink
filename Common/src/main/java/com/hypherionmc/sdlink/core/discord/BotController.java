@@ -179,6 +179,10 @@ public final class BotController {
                     .setBulkDeleteSplittingEnabled(true)
                     .setEventManager(new ThreadedEventManager())
                     .build();
+
+            if (!SDLinkConfig.INSTANCE.botConfig.enableSlashCommands) {
+                _jda.updateCommands().queue();
+            }
         } catch (Exception e) {
             logger.error("Failed to connect to discord", e);
         }
